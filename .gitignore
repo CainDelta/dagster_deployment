@@ -1,0 +1,7 @@
+**/.env
+.nux
+.telemetry
+schedules
+history
+logs
+**/__pycache__/

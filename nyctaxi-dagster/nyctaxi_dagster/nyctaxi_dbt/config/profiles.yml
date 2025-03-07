@@ -1,0 +1,12 @@
+nyctaxi_dbt:
+  outputs:
+    dev:
+      dbname: taxi_data
+      host: localhost
+      pass: pass
+      port: 5432
+      schema: public
+      threads: 4
+      type: postgres
+      user: user
+  target: dev

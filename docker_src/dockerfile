@@ -1,0 +1,28 @@
+FROM python:3.10-slim-bullseye
+
+RUN mkdir -p /opt/dagster/dagster_home /opt/dagster/app
+
+RUN apt update
+RUN apt install -y postgresql-client git vim htop curl gnupg
+RUN apt-get upgrade -y
+
+# Install uv
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Set uv to PATH (adjust if needed)
+ENV PATH="/root/.local/bin:$PATH"
+
+
+RUN uv pip install --system dagster dagster-webserver\
+        dagster-dbt pandas\
+        dagster-postgres requests  \
+        dagster-docker dbt-postgres sqlalchemy
+
+RUN apt-get -y update;
+RUN apt-get install sshpass -y
+
+
+
+EXPOSE 3000
+
+ENTRYPOINT ["sh", "/opt/dagster/src/startup.sh"]

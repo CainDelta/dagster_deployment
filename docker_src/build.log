@@ -1,0 +1,181 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:e7cd1c004204e4a5912d272937ab3222b65a697cf1a31c3561574c1f88632a82
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:c815f25d4bb504672c70abcefe478d6e4c76293bb93855042bfda02324e322e2
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim-bullseye
+#3 sha256:4c62cd40ec0cec6f5d572faa0288518932c6b7873c0df1080e0806e5ca4b2973
+#3 DONE 0.9s
+
+#4 [ 1/14] FROM docker.io/library/python:3.10-slim-bullseye@sha256:e89739e9b11753ace337116c9086c4ba780c0c3daff118a7c680783cf7afada1
+#4 sha256:38ee56514fb64693f6b4e67f55f166421a477a01ad02844bd0c7c35484d72237
+#4 CACHED
+
+#5 [ 2/14] RUN apt update
+#5 sha256:6bc0dd4f3339f01332e0a5fd7be8ea730cb42f5693824746a76b968540749217
+#5 0.244 
+#5 0.244 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#5 0.244 
+#5 0.486 Get:1 http://deb.debian.org/debian bullseye InRelease [116 kB]
+#5 0.561 Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+#5 0.562 Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+#5 1.799 Get:4 http://deb.debian.org/debian bullseye/main amd64 Packages [8068 kB]
+#5 3.022 Get:5 http://deb.debian.org/debian-security bullseye-security/main amd64 Packages [270 kB]
+#5 4.326 Get:6 http://deb.debian.org/debian bullseye-updates/main amd64 Packages [18.8 kB]
+#5 7.849 Fetched 8565 kB in 7s (1146 kB/s)
+#5 7.849 Reading package lists...
+#5 10.44 Building dependency tree...
+#5 10.91 Reading state information...
+#5 10.93 All packages are up to date.
+#5 DONE 11.0s
+
+#6 [ 3/14] RUN apt install -y postgresql-client git vim htop curl gnupg
+#6 sha256:9f50d7a11dabbbc874e7409f688d6eb89fb825b68c44f4aa9b37aecd1df4359d
+#6 0.202 
+#6 0.202 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 0.202 
+#6 0.278 Reading package lists...
+#6 2.899 Building dependency tree...
+#6 3.367 Reading state information...
+#6 3.811 The following additional packages will be installed:
+#6 3.812   dirmngr git-man gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+#6 3.812   gpg-wks-server gpgconf gpgsm less libassuan0 libbrotli1 libbsd0 libcbor0
+#6 3.812   libcurl3-gnutls libcurl4 libedit2 liberror-perl libfido2-1 libgdbm-compat4
+#6 3.812   libgpm2 libksba8 libldap-2.4-2 libldap-common libmd0 libnghttp2-14
+#6 3.813   libnl-3-200 libnl-genl-3-200 libnpth0 libperl5.32 libpq5 libpsl5 librtmp1
+#6 3.813   libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 libx11-6
+#6 3.813   libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1 openssh-client patch
+#6 3.813   perl perl-modules-5.32 pinentry-curses postgresql-client-13
+#6 3.814   postgresql-client-common publicsuffix sensible-utils vim-common vim-runtime
+#6 3.814   xauth xxd
+#6 3.818 Suggested packages:
+#6 3.818   dbus-user-session libpam-systemd pinentry-gnome3 tor gettext-base
+#6 3.818   git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+#6 3.818   gitweb git-cvs git-mediawiki git-svn parcimonie xloadimage scdaemon
+#6 3.818   lm-sensors lsof strace gpm libsasl2-modules-gssapi-mit
+#6 3.818   | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+#6 3.818   libsasl2-modules-sql keychain libpam-ssh monkeysphere ssh-askpass ed
+#6 3.818   diffutils-doc perl-doc libterm-readline-gnu-perl
+#6 3.818   | libterm-readline-perl-perl make libtap-harness-archive-perl pinentry-doc
+#6 3.818   postgresql-13 postgresql-doc-13 ctags vim-doc vim-scripts
+#6 5.600 The following NEW packages will be installed:
+#6 5.600   curl dirmngr git git-man gnupg gnupg-l10n gnupg-utils gpg gpg-agent
+#6 5.600   gpg-wks-client gpg-wks-server gpgconf gpgsm htop less libassuan0 libbrotli1
+#6 5.600   libbsd0 libcbor0 libcurl3-gnutls libcurl4 libedit2 liberror-perl libfido2-1
+#6 5.601   libgdbm-compat4 libgpm2 libksba8 libldap-2.4-2 libldap-common libmd0
+#6 5.601   libnghttp2-14 libnl-3-200 libnl-genl-3-200 libnpth0 libperl5.32 libpq5
+#6 5.601   libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1
+#6 5.601   libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1
+#6 5.601   openssh-client patch perl perl-modules-5.32 pinentry-curses
+#6 5.601   postgresql-client postgresql-client-13 postgresql-client-common publicsuffix
+#6 5.602   sensible-utils vim vim-common vim-runtime xauth xxd
+#6 5.750 0 upgraded, 64 newly installed, 0 to remove and 0 not upgraded.
+#6 5.750 Need to get 37.8 MB of archives.
+#6 5.750 After this operation, 161 MB of additional disk space will be used.
+#6 5.750 Get:1 http://deb.debian.org/debian bullseye/main amd64 perl-modules-5.32 all 5.32.1-4+deb11u3 [2823 kB]
+#6 5.971 Get:2 http://deb.debian.org/debian bullseye/main amd64 libgdbm-compat4 amd64 1.19-2 [44.7 kB]
+#6 5.976 Get:3 http://deb.debian.org/debian bullseye/main amd64 libperl5.32 amd64 5.32.1-4+deb11u3 [4121 kB]
+#6 6.232 Get:4 http://deb.debian.org/debian bullseye/main amd64 perl amd64 5.32.1-4+deb11u3 [293 kB]
+#6 6.251 Get:5 http://deb.debian.org/debian bullseye/main amd64 less amd64 551-2 [133 kB]
+#6 6.261 Get:6 http://deb.debian.org/debian bullseye/main amd64 sensible-utils all 0.0.14 [14.8 kB]
+#6 6.263 Get:7 http://deb.debian.org/debian bullseye/main amd64 xxd amd64 2:8.2.2434-3+deb11u1 [192 kB]
+#6 6.276 Get:8 http://deb.debian.org/debian bullseye/main amd64 vim-common all 2:8.2.2434-3+deb11u1 [226 kB]
+#6 6.292 Get:9 http://deb.debian.org/debian bullseye/main amd64 libmd0 amd64 1.0.3-3 [28.0 kB]
+#6 6.295 Get:10 http://deb.debian.org/debian bullseye/main amd64 libbsd0 amd64 0.11.3-1+deb11u1 [108 kB]
+#6 6.303 Get:11 http://deb.debian.org/debian bullseye/main amd64 libedit2 amd64 3.1-20191231-2+b1 [96.7 kB]
+#6 6.311 Get:12 http://deb.debian.org/debian bullseye/main amd64 libcbor0 amd64 0.5.0+dfsg-2 [24.0 kB]
+#6 6.314 Get:13 http://deb.debian.org/debian bullseye/main amd64 libfido2-1 amd64 1.6.0-2 [53.3 kB]
+#6 6.318 Get:14 http://deb.debian.org/debian bullseye/main amd64 openssh-client amd64 1:8.4p1-5+deb11u3 [932 kB]
+#6 6.377 Get:15 http://deb.debian.org/debian bullseye/main amd64 libbrotli1 amd64 1.0.9-2+b2 [279 kB]
+#6 6.395 Get:16 http://deb.debian.org/debian bullseye/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg-2.1+deb11u1 [69.1 kB]
+#6 6.400 Get:17 http://deb.debian.org/debian bullseye/main amd64 libsasl2-2 amd64 2.1.27+dfsg-2.1+deb11u1 [106 kB]
+#6 6.408 Get:18 http://deb.debian.org/debian bullseye/main amd64 libldap-2.4-2 amd64 2.4.57+dfsg-3+deb11u1 [232 kB]
+#6 6.424 Get:19 http://deb.debian.org/debian bullseye/main amd64 libnghttp2-14 amd64 1.43.0-1+deb11u1 [77.2 kB]
+#6 6.431 Get:20 http://deb.debian.org/debian bullseye/main amd64 libpsl5 amd64 0.21.0-1.2 [57.3 kB]
+#6 6.435 Get:21 http://deb.debian.org/debian bullseye/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+#6 6.439 Get:22 http://deb.debian.org/debian bullseye/main amd64 libssh2-1 amd64 1.9.0-2 [156 kB]
+#6 6.450 Get:23 http://deb.debian.org/debian bullseye/main amd64 libcurl4 amd64 7.74.0-1.3+deb11u11 [347 kB]
+#6 6.475 Get:24 http://deb.debian.org/debian bullseye/main amd64 curl amd64 7.74.0-1.3+deb11u11 [271 kB]
+#6 6.493 Get:25 http://deb.debian.org/debian bullseye/main amd64 libassuan0 amd64 2.5.3-7.1 [50.5 kB]
+#6 6.497 Get:26 http://deb.debian.org/debian bullseye/main amd64 gpgconf amd64 2.2.27-2+deb11u2 [548 kB]
+#6 6.534 Get:27 http://deb.debian.org/debian bullseye/main amd64 libksba8 amd64 1.5.0-3+deb11u2 [123 kB]
+#6 6.543 Get:28 http://deb.debian.org/debian bullseye/main amd64 libnpth0 amd64 1.6-3 [19.0 kB]
+#6 6.545 Get:29 http://deb.debian.org/debian bullseye/main amd64 dirmngr amd64 2.2.27-2+deb11u2 [763 kB]
+#6 6.595 Get:30 http://deb.debian.org/debian bullseye/main amd64 libcurl3-gnutls amd64 7.74.0-1.3+deb11u11 [344 kB]
+#6 6.618 Get:31 http://deb.debian.org/debian bullseye/main amd64 liberror-perl all 0.17029-1 [31.0 kB]
+#6 6.621 Get:32 http://deb.debian.org/debian bullseye/main amd64 git-man all 1:2.30.2-1+deb11u2 [1828 kB]
+#6 6.736 Get:33 http://deb.debian.org/debian bullseye/main amd64 git amd64 1:2.30.2-1+deb11u2 [5518 kB]
+#6 7.084 Get:34 http://deb.debian.org/debian bullseye/main amd64 gnupg-l10n all 2.2.27-2+deb11u2 [1086 kB]
+#6 7.153 Get:35 http://deb.debian.org/debian bullseye/main amd64 gnupg-utils amd64 2.2.27-2+deb11u2 [905 kB]
+#6 7.211 Get:36 http://deb.debian.org/debian bullseye/main amd64 gpg amd64 2.2.27-2+deb11u2 [928 kB]
+#6 7.269 Get:37 http://deb.debian.org/debian bullseye/main amd64 pinentry-curses amd64 1.1.0-4 [64.9 kB]
+#6 7.275 Get:38 http://deb.debian.org/debian bullseye/main amd64 gpg-agent amd64 2.2.27-2+deb11u2 [669 kB]
+#6 7.318 Get:39 http://deb.debian.org/debian bullseye/main amd64 gpg-wks-client amd64 2.2.27-2+deb11u2 [524 kB]
+#6 7.352 Get:40 http://deb.debian.org/debian bullseye/main amd64 gpg-wks-server amd64 2.2.27-2+deb11u2 [516 kB]
+#6 7.386 Get:41 http://deb.debian.org/debian bullseye/main amd64 gpgsm amd64 2.2.27-2+deb11u2 [645 kB]
+#6 7.425 Get:42 http://deb.debian.org/debian bullseye/main amd64 gnupg all 2.2.27-2+deb11u2 [825 kB]
+#6 7.477 Get:43 http://deb.debian.org/debian bullseye/main amd64 libnl-3-200 amd64 3.4.0-1+b1 [63.6 kB]
+#6 7.482 Get:44 http://deb.debian.org/debian bullseye/main amd64 libnl-genl-3-200 amd64 3.4.0-1+b1 [21.2 kB]
+#6 7.484 Get:45 http://deb.debian.org/debian bullseye/main amd64 htop amd64 3.0.5-7 [127 kB]
+#6 7.493 Get:46 http://deb.debian.org/debian bullseye/main amd64 libgpm2 amd64 1.20.7-8 [35.6 kB]
+#6 7.496 Get:47 http://deb.debian.org/debian bullseye/main amd64 libldap-common all 2.4.57+dfsg-3+deb11u1 [95.8 kB]
+#6 7.503 Get:48 http://deb.debian.org/debian-security bullseye-security/main amd64 libpq5 amd64 13.14-0+deb11u1 [182 kB]
+#6 7.515 Get:49 http://deb.debian.org/debian bullseye/main amd64 libsasl2-modules amd64 2.1.27+dfsg-2.1+deb11u1 [104 kB]
+#6 7.524 Get:50 http://deb.debian.org/debian bullseye/main amd64 libxau6 amd64 1:1.0.9-1 [19.7 kB]
+#6 7.526 Get:51 http://deb.debian.org/debian bullseye/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
+#6 7.529 Get:52 http://deb.debian.org/debian bullseye/main amd64 libxcb1 amd64 1.14-3 [140 kB]
+#6 7.539 Get:53 http://deb.debian.org/debian bullseye/main amd64 libx11-data all 2:1.7.2-1+deb11u2 [311 kB]
+#6 7.559 Get:54 http://deb.debian.org/debian bullseye/main amd64 libx11-6 amd64 2:1.7.2-1+deb11u2 [772 kB]
+#6 7.611 Get:55 http://deb.debian.org/debian bullseye/main amd64 libxext6 amd64 2:1.3.3-1.1 [52.7 kB]
+#6 7.615 Get:56 http://deb.debian.org/debian bullseye/main amd64 libxmuu1 amd64 2:1.1.2-2+b3 [23.9 kB]
+#6 7.618 Get:57 http://deb.debian.org/debian bullseye/main amd64 patch amd64 2.7.6-7 [128 kB]
+#6 7.627 Get:58 http://deb.debian.org/debian bullseye/main amd64 postgresql-client-common all 225+deb11u1 [89.4 kB]
+#6 7.634 Get:59 http://deb.debian.org/debian-security bullseye-security/main amd64 postgresql-client-13 amd64 13.14-0+deb11u1 [1513 kB]
+#6 7.723 Get:60 http://deb.debian.org/debian bullseye/main amd64 postgresql-client all 13+225+deb11u1 [64.9 kB]
+#6 7.728 Get:61 http://deb.debian.org/debian bullseye/main amd64 publicsuffix all 20220811.1734-0+deb11u1 [127 kB]
+#6 7.737 Get:62 http://deb.debian.org/debian bullseye/main amd64 vim-runtime all 2:8.2.2434-3+deb11u1 [6226 kB]
+#6 8.121 Get:63 http://deb.debian.org/debian bullseye/main amd64 vim amd64 2:8.2.2434-3+deb11u1 [1494 kB]
+#6 8.213 Get:64 http://deb.debian.org/debian bullseye/main amd64 xauth amd64 1:1.1-1 [40.5 kB]
+#6 8.734 debconf: delaying package configuration, since apt-utils is not installed
+#6 8.852 Fetched 37.8 MB in 3s (14.6 MB/s)
+#6 8.980 Selecting previously unselected package perl-modules-5.32.
+#6 8.981 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7040 files and directories currently installed.)
+#6 8.996 Preparing to unpack .../00-perl-modules-5.32_5.32.1-4+deb11u3_all.deb ...
+#6 9.000 Unpacking perl-modules-5.32 (5.32.1-4+deb11u3) ...
+#6 9.966 Selecting previously unselected package libgdbm-compat4:amd64.
+#6 9.969 Preparing to unpack .../01-libgdbm-compat4_1.19-2_amd64.deb ...
+#6 9.974 Unpacking libgdbm-compat4:amd64 (1.19-2) ...
+#6 10.12 Selecting previously unselected package libperl5.32:amd64.
+#6 10.12 Preparing to unpack .../02-libperl5.32_5.32.1-4+deb11u3_amd64.deb ...
+#6 10.12 Unpacking libperl5.32:amd64 (5.32.1-4+deb11u3) ...
+#6 11.50 Selecting previously unselected package perl.
+#6 11.51 Preparing to unpack .../03-perl_5.32.1-4+deb11u3_amd64.deb ...
+#6 11.60 Unpacking perl (5.32.1-4+deb11u3) ...
+#6 11.81 Selecting previously unselected package less.
+#6 11.81 Preparing to unpack .../04-less_551-2_amd64.deb ...
+#6 11.83 Unpacking less (551-2) ...
+#6 12.01 Selecting previously unselected package sensible-utils.
+#6 12.01 Preparing to unpack .../05-sensible-utils_0.0.14_all.deb ...
+#6 12.01 Unpacking sensible-utils (0.0.14) ...
+#6 12.16 Selecting previously unselected package xxd.
+#6 12.16 Preparing to unpack .../06-xxd_2%3a8.2.2434-3+deb11u1_amd64.deb ...
+#6 12.16 Unpacking xxd (2:8.2.2434-3+deb11u1) ...
+#6 12.35 Selecting previously unselected package vim-common.
+#6 12.35 Preparing to unpack .../07-vim-common_2%3a8.2.2434-3+deb11u1_all.deb ...
+#6 12.44 Unpacking vim-common (2:8.2.2434-3+deb11u1) ...
+#6 12.61 Selecting previously unselected package libmd0:amd64.
+#6 12.61 Preparing to unpack .../08-libmd0_1.0.3-3_amd64.deb ...
+#6 12.61 Unpacking libmd0:amd64 (1.0.3-3) ...
+#6 12.75 Selecting previously unselected package libbsd0:amd64.
+#6 12.75 Preparing to unpack .../09-libbsd0_0.11.3-1+deb11u1_amd64.deb ...
+#6 12.75 Unpacking libbsd0:amd64 (0.11.3-1+deb11u1) ...
+#6 12.92 Selecting previously unselected package libedit2:amd64.
+#6 12.92 Preparing to unpack .../10-libedit2_3.1-20191231-2+b1_amd64.deb ...
+#6 12.92 Unpacking libedit2:amd64 (3.1-20191231-2+b1) ...
+#6 CANCELED
+context canceled
